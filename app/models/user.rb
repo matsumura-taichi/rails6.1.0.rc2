@@ -1,3 +1,5 @@
 class User < ApplicationRecord
-  has_many :posts, strict_loading: true
+  self.strict_loading_by_default = true
+
+  has_many :posts
 end
